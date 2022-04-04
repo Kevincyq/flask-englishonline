@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+			<div class="col-md-3 blog-sidebar">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 id="zcr-profile"><strong>My Profile</strong></h4>
+						<!--<img src="#" alt="" class="img-responsive center-block" id="#img" title=""> -->
+					</div>
+				</div>
+				<hr>
+				<div class="sidebar-module list-group blog-tags">
+					<a href="{{url_for('profile.redirection')}}" class="list-group-item">
+					<span class="icon fa fa-folder-open"></span> 基本信息
+					</a>
+					<a href="{{url_for('profile.change_password')}}" class="list-group-item">
+					<span class="icon fa fa-folder-open"></span> 修改密码
+					</a>
+					<a href="{{url_for('profile.check_payment')}}" class="list-group-item">
+					付费明细
+					</a>
+					<a href="{{url_for('profile.check_points')}}" class="list-group-item">
+					<span class="icon fa fa-folder-open"></span> 积分明细
+					</a>
+					<a href="{{url_for('profile.check_awards')}}" class="list-group-item">
+					<span class="icon fa fa-folder-open"></span> 奖励情况
+					</a>
+					<a href="#" class="list-group-item">
+					<span class="icon fa fa-folder-open"></span> 我的发帖
+					</a>
+
+				</div>
+			</div>
+
+			<div class="col-md-9 blog-main">
+				<div>
+					<h5><span>奖励总计：</span><span>{{awards}}  节课</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>奖励次数：</span><span>{{awards_count}}  次</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>最近一次奖励: </span> <span>{{last_award.award_increment}}  节课</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>最近奖励时间: </span> <span>{{last_award.award_time}}</span></h5>
+					<hr>
+				</div>
+				<!--
+				<div>
+					<h5><span><a href="#">查看明细</a></span></a></h5>
+					<hr>
+				</div> -->
+
+
+			</div>
+<!-- /.main-content -->
+{% endblock %}

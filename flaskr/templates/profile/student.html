@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+			<div class="col-md-3 blog-sidebar">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 id="zcr-profile"><strong>My Profile</strong></h4>
+						<!--<img src="#" alt="" class="img-responsive center-block" id="#img" title=""> -->
+					</div>
+				</div>
+				<hr>
+				<div class="sidebar-module list-group blog-tags">
+					<a href="{{url_for('profile.redirection')}}" class="list-group-item">
+					基本信息
+					</a>
+					<a href="{{url_for('profile.change_password')}}" class="list-group-item">
+					修改密码
+					</a>
+					<a href="{{url_for('profile.check_payment')}}" class="list-group-item">
+					付费明细
+					</a>
+					<a href="{{url_for('profile.check_points')}}" class="list-group-item">
+					积分明细
+					</a>
+					<a href="{{url_for('profile.check_awards')}}" class="list-group-item">
+					奖励情况
+					</a>
+					<a href="#" class="list-group-item">
+					我的发帖
+					</a>
+				</div>
+  				<!--<div class="list-group latest-article">
+					<li class="list-group-item">
+						<h4><span class="label label-info">New</span> 最近文章</h4>
+					</li>
+					
+					<a href="/blog/article/86/" class="list-group-item">
+						<h5 class="list-group-item-heading">
+							<span class="icon fa fa-circle-o"></span>
+							博客刚刚上线
+						</h5>
+						<p class="list-group-item-text">
+							<small>
+								<span class="icon fa fa-calendar-check-o fa-lg"></span>
+								2020年3月4日 13:45
+							</small>
+						</p>
+					</a>
+				</div> -->
+			</div>
+
+			<div class="col-md-9 blog-main">
+				<div>
+					<h5><span style="color: red">* 用户名：</span><span>{{student.user}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span style="color: red">* Email: </span> <span>{{student.user.user_email}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span style="color: red">* Register: </span> <span>{{student.user.register_at}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>姓名: </span> <span>{{student.real_name}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>性别: </span> <span>{{student.gender}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>年级: </span> <span>{{student.grade}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span style="color: red">* 水平: </span> <span>{{student.level}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>电话号码: </span> <span>{{student.phone}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>地区: </span> <span>{{student.region}}</span></h5>
+					<hr>
+				</div>
+				<p>
+					<a class="btn btn-primary" href="{{url_for('profile.edit')}}">Edit</a>
+					<span style="color: red; font-style: italic;">带 * 信息不允许修改</span>
+				</p>
+
+
+			</div>
+<!-- /.main-content -->
+{% endblock %}

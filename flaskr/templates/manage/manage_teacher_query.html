@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li class="active">
+					 Users
+				</li>
+				<li>
+					 <a href="{{url_for('manage.payment')}}">Payment</a>
+				</li>
+				<li>
+					<a href="{{url_for('manage.expense')}}">Expense</a>
+				</li>
+				<li>
+					<a href="{{url_for('manage.awards')}}">Awards</a>
+				</li>
+				<li>
+					<a href="#">Blogs</a>
+				</li>
+				<li>
+					<a href="#">Comments</a>
+				</li>
+			</ul>
+			<div class="col-md-9 blog-main">
+				<div>
+					<h5><span>用户名：</span><span>{{teacher.user}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Email: </span> <span>{{teacher.user.user_email}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Register: </span> <span>{{teacher.user.register_at}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Full Name: </span> <span>{{teacher.real_name}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Level: </span> <span>{{teacher.level}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Finished:</span><span>{{count[0]}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Tuition: </span> <span>{{expense[0]}}</span></h5>
+					<hr>
+				</div>
+				<p>
+					<span><a class="btn" href="{{url_for('manage.edit', id=teacher.user.id)}}">Edit</a></span>
+					<span><a class="btn" href="{{url_for('manage.query')}}">Back</a> </span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

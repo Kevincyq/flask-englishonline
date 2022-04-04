@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+			<div class="col-md-3 blog-sidebar">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 id="zcr-profile"><strong>My Profile</strong></h4>
+						<!--<img src="#" alt="" class="img-responsive center-block" id="#img" title=""> -->
+					</div>
+				</div>
+				<hr>
+				<div class="sidebar-module list-group blog-tags">
+					<a href="{{url_for('profile.redirection')}}" class="list-group-item">
+					基本信息
+					</a>
+					<a href="{{url_for('profile.change_password')}}" class="list-group-item">
+					修改密码
+					</a>
+					<a href="{{url_for('profile.check_payment')}}" class="list-group-item">
+					付费明细
+					</a>
+					<a href="{{url_for('profile.check_points')}}" class="list-group-item">
+					积分明细
+					</a>
+					<a href="{{url_for('profile.check_awards')}}" class="list-group-item">
+					奖励情况
+					</a>
+					<a href="#" class="list-group-item">
+					我的发帖
+					</a>
+				</div>
+			</div>
+
+			<div class="col-md-9 blog-main">
+             <div class="row clearfix">
+  <form class="col-md-9 column" method="post">
+    <div class="form-group">
+    <label for="real_name">姓名: </label><input class="form-control" name="real_name" id="real_name">
+	</div>
+	  <div class="form-group">
+		  <label for="gender">性别: </label><input class="form-control" name="gender" id="gender">
+	  </div>
+	  <div class="form-group">
+		  <label for="gender">年级: </label><input class="form-control" name="grade" id="grade">
+	  </div>
+	  <div class="form-group">
+		  <label for="phone">电话号码: </label><input class="form-control" name="phone" id="phone">
+	  </div>
+	  <div class="form-group">
+		  <label for="region">地区: </label><input class="form-control" name="region" id="region">
+	  </div>
+	  <hr>
+	  <div>
+      <button class="btn btn-default" type="submit">保存</button>
+		  <a href="/profile/redirection" class="btn">取消</a>
+	  </div>
+  </form>
+</div>
+
+			</div>
+<!-- /.main-content -->
+{% endblock %}

@@ -1,0 +1,101 @@
+1. Register a new user
+http POST http://localhost:5000/api/users username=xxx password=yyy email=xxx@example.com phone=cellphone_number role_id=1
+
+Example
+请求： http POST http://localhost:5000/api/users username=Alisa password=test user_email=alisa@example.com phone=13513513456 role_id=1
+响应：
+HTTP/1.0 201 CREATED
+Content-Length: 172
+Content-Type: application/json
+Date: Thu, 16 Jul 2020 14:47:50 GMT
+Location: http://localhost:5000/api/users/23
+Server: Werkzeug/0.16.0 Python/3.7.0
+
+{
+    "id": 23,
+    "phone": "13513513456",
+    "register_at": "Thu, 16 Jul 2020 22:47:50 GMT",
+    "role_id": 1,
+    "user_email": "alisa@example.com",
+    "username": "Alisa"
+}
+
+
+2. Get a new token
+http --auth <username>:<password> POST http://localhost:5000/api/tokens
+
+Example
+请求：http --auth Alisa:test POST http://localhost:5000/api/tokens
+响应：
+HTTP/1.0 200 OK
+Content-Length: 50
+Content-Type: application/json
+Date: Thu, 16 Jul 2020 14:51:22 GMT
+Server: Werkzeug/0.16.0 Python/3.7.0
+
+{
+    "token": "uNGMVn8vzc9cEVMxzYxXDCZcdtZ25+sn"
+}
+
+3. Get an existing user with token
+http GET http://localhost:5000/api/users/id "Authorization:Bearer token"
+
+Example
+请求：http GET http://localhost:5000/api/users/23 "Authorization:Bearer uNGMVn8vzc9cEVMxzYxXDCZcdtZ25+sn"
+响应：
+HTTP/1.0 200 OK
+Content-Length: 172
+Content-Type: application/json
+Date: Thu, 16 Jul 2020 14:55:09 GMT
+Server: Werkzeug/0.16.0 Python/3.7.0
+
+{
+    "id": 23,
+    "phone": "13513513456",
+    "register_at": "Thu, 16 Jul 2020 22:47:50 GMT",
+    "role_id": 1,
+    "user_email": "alisa@example.com",
+    "username": "Alisa"
+}
+
+4. Get an existing user without token
+http GET http://localhost:5000/api/users/id
+
+Example
+请求：http GET http://localhost:5000/api/users/23
+响应：
+HTTP/1.0 401 UNAUTHORIZED
+Content-Length: 30
+Content-Type: application/json
+Date: Thu, 16 Jul 2020 14:57:27 GMT
+Server: Werkzeug/0.16.0 Python/3.7.0
+WWW-Authenticate: Bearer realm="Authentication Required"
+
+{
+    "error": "Unauthorized"
+}
+
+5. Revoke a token(http请求发送删除token命令，后端通过向后设置token有效时间来废除token)
+http DELETE http://localhost:5000/api/tokens Authorization:"Bearer token"
+
+Example
+请求：http DELETE http://localhost:5000/api/tokens Authorization:"Bearer uNGMVn8vzc9cEVMxzYxXDCZcdtZ25+sn"
+响应：
+HTTP/1.0 204 NO CONTENT
+Content-Type: text/html; charset=utf-8
+Date: Thu, 16 Jul 2020 15:04:50 GMT
+Server: Werkzeug/0.16.0 Python/3.7.0
+
+再次发起请求：http GET http://localhost:5000/api/users/23 "Authorization:Bearer uNGMVn8vzc9cEVMxzYxXDCZcdtZ25+sn"
+响应显示无授权，说明之前的token已经废除：
+HTTP/1.0 401 UNAUTHORIZED
+Content-Length: 30
+Content-Type: application/json
+Date: Thu, 16 Jul 2020 15:05:59 GMT
+Server: Werkzeug/0.16.0 Python/3.7.0
+WWW-Authenticate: Bearer realm="Authentication Required"
+
+{
+    "error": "Unauthorized"
+}
+

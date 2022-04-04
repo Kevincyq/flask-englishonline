@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li class="active">
+					 Users
+				</li>
+				<li>
+					 <a href="{{url_for('manage.payment')}}">Payment</a>
+				</li>
+				<li>
+					<a href="{{url_for('manage.expense')}}">Expense</a>
+				</li>
+				<li>
+					<a href="{{url_for('manage.awards')}}">Awards</a>
+				</li>
+				<li>
+					<a href="#">Blogs</a>
+				</li>
+				<li>
+					<a href="#">Comments</a>
+				</li>
+			</ul>
+			<div class="col-md-9 blog-main">
+				<div>
+					<h5><span>用户名：</span><span>{{student.user}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Email: </span> <span>{{student.user.user_email}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Register: </span> <span>{{student.user.register_at}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Full Name: </span> <span>{{student.real_name}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Gender: </span> <span>{{student.gender}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Grade: </span> <span>{{student.grade}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Level: </span> <span>{{student.level}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Phone: </span> <span>{{student.phone}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Region: </span> <span>{{student.region}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Tier-Points: </span> <span>{{tier}}  {{points}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Finished:</span><span>{{count[0]}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Payment: </span> <span>{{payments[0]}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Awards: </span> <span>{{awards}}</span></h5>
+					<hr>
+				</div>
+				<p>
+					<span><a class="btn" href="{{url_for('manage.edit', id=student.user.id)}}">Edit</a></span>
+					<span><a class="btn" href="{{url_for('manage.query')}}">Back</a> </span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

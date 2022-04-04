@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					<a href="{{url_for('manage.query')}}">Users</a>
+				</li>
+				<li>
+                    <a href="{{url_for('manage.payment')}}">Payment</a>
+				</li>
+				<li>
+					<a href="#">Expense</a>
+				</li>
+				<li class="active">
+					Awards
+				</li>
+				<li>
+					<a href="#">Blogs</a>
+				</li>
+				<li>
+					<a href="#">Comments</a>
+				</li>
+			</ul>
+			<form method="post" role="form" class="form-horizontal">
+				<div class="form-group">
+					<label for="student_id" class="col-sm-2 control-label">Student ID:</label>
+					<div class="col-sm-2">
+						<input name="student_id" id="student_id" class="form-control" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="award_increment" class="col-sm-2 control-label">Grant Awards:</label>
+					<div class="col-sm-2">
+						<input name="award_increment" id="award_increment" class="form-control" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="award_referee" class="col-sm-2 control-label">Referee:</label>
+					<div class="col-sm-2">
+						<input name="award_referee" id="award_referee" class="form-control" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Grant</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+{% endblock %}

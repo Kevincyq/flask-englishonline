@@ -1,0 +1,289 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-05-30 21:23+0800\n"
+"PO-Revision-Date: 2020-05-30 21:24+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: auth.py:26 templates/base.html:65
+msgid "Register"
+msgstr "注册"
+
+#: auth.py:48
+msgid "Log in"
+msgstr "登录"
+
+#: templates/base.html:40
+msgid "Home"
+msgstr "首页"
+
+#: templates/base.html:43
+msgid "Curriculum"
+msgstr "课程体系"
+
+#: templates/base.html:46
+msgid "How to Use"
+msgstr "如何上课"
+
+#: templates/base.html:49
+msgid "CourseList"
+msgstr "课程预约"
+
+#: templates/base.html:52
+msgid "Scheduling"
+msgstr "排课计划"
+
+#: templates/base.html:56
+msgid "Video Classroom"
+msgstr "视频教室"
+
+#: templates/base.html:57
+msgid "Download"
+msgstr "下载中心"
+
+#: templates/base.html:62
+msgid "Welcome"
+msgstr "欢迎您"
+
+#: templates/base.html:63
+msgid "Logout"
+msgstr "退出"
+
+#: templates/base.html:66
+msgid "Login"
+msgstr "登录"
+
+#: templates/auth/login.html:4
+#, python-format
+msgid "%(ltitle)s"
+msgstr "登录"
+
+#: templates/auth/login.html:14 templates/auth/register.html:13
+#, python-format
+msgid "%(username)s"
+msgstr "用户名"
+
+#: templates/auth/login.html:20 templates/auth/register.html:22
+#, python-format
+msgid "%(password)s"
+msgstr "密码"
+
+#: templates/auth/login.html:28
+#, python-format
+msgid "%(remember)s"
+msgstr "记住我"
+
+#: templates/auth/register.html:4
+#, python-format
+msgid "%(rtitle)s"
+msgstr "注册"
+
+#: templates/auth/register.html:31
+#, python-format
+msgid "%(password2)s"
+msgstr "重复密码"
+
+#: templates/auth/register.html:40
+#, python-format
+msgid "%(email)s"
+msgstr "电子邮件"
+
+#: templates/auth/register.html:46
+#, python-format
+msgid "%(identity)s"
+msgstr "身份"
+
+#: templates/blog/blog.html:4
+msgid "Post Here"
+msgstr "贴子"
+
+#: templates/blog/blog.html:6
+msgid "Create Post"
+msgstr "发贴"
+
+#: templates/blog/blog.html:23
+msgid "Post on"
+msgstr "发贴于"
+
+#: templates/blog/blog.html:25 templates/blog/update.html:4
+msgid "Edit"
+msgstr "编辑"
+
+#: templates/blog/create.html:4
+msgid "New Post"
+msgstr "新贴"
+
+#: templates/blog/create.html:11 templates/blog/update.html:11
+msgid "Title"
+msgstr "标题"
+
+#: templates/blog/create.html:15 templates/blog/update.html:15
+msgid "Content"
+msgstr "内容"
+
+#: templates/blog/create.html:20 templates/blog/update.html:17
+msgid "Save"
+msgstr "保存"
+
+#: templates/blog/update.html:22 templates/course/course.html:58
+msgid "Delete"
+msgstr "删除"
+
+#: templates/course/course.html:4
+msgid "Course List"
+msgstr "课程列表"
+
+#: templates/course/course.html:7 templates/course/create.html:4
+msgid "Create Course"
+msgstr "创建课程"
+
+#: templates/course/course.html:14 templates/cousession/book.html:7
+msgid "No."
+msgstr "编号"
+
+#: templates/course/course.html:17 templates/course/create.html:7
+#: templates/cousession/book.html:19 templates/cousession/cousession.html:36
+msgid "Teacher"
+msgstr "教师"
+
+#: templates/course/course.html:20 templates/course/create.html:27
+#: templates/cousession/book.html:25 templates/cousession/cousession.html:27
+msgid "Course Name"
+msgstr "课程名"
+
+#: templates/course/course.html:23 templates/course/create.html:35
+#: templates/cousession/book.html:31
+msgid "Week Day"
+msgstr "星期几"
+
+#: templates/course/course.html:26 templates/course/create.html:49
+#: templates/cousession/book.html:37
+msgid "Beginning Time"
+msgstr "开始时间"
+
+#: templates/course/course.html:29
+msgid "Duration (Min)"
+msgstr "时长"
+
+#: templates/course/course.html:32 templates/cousession/cousession.html:39
+msgid "Status"
+msgstr "状态"
+
+#: templates/course/course.html:46
+msgid "Reserved"
+msgstr "已预订"
+
+#: templates/course/course.html:56
+msgid "Reserve"
+msgstr "预订"
+
+#: templates/course/create.html:19
+msgid "Course Type"
+msgstr "课程类型"
+
+#: templates/course/create.html:83
+msgid "Duration"
+msgstr "时长"
+
+#: templates/course/create.html:90
+msgid "Create"
+msgstr "创建"
+
+#: templates/cousession/book.html:4
+msgid "Reserve Course"
+msgstr "预订课程"
+
+#: templates/cousession/book.html:13
+msgid "Student ID"
+msgstr "学生ID"
+
+#: templates/cousession/book.html:43 templates/cousession/book.html:72
+#: templates/cousession/cousession.html:30
+msgid "Session Date"
+msgstr "上课日期"
+
+#: templates/cousession/book.html:57
+msgid "Recurred"
+msgstr "重复"
+
+#: templates/cousession/book.html:64
+msgid "Confirm"
+msgstr "确认"
+
+#: templates/cousession/book.html:72
+msgid "Please Remind!"
+msgstr "请注意！"
+
+#: templates/cousession/book.html:72
+msgid "The"
+msgstr "这里"
+
+#: templates/cousession/book.html:73
+msgid ""
+"should be the Week Day of the first session you're planning to have. Do "
+"not choose the date backwards."
+msgstr "应该是预计第一次上课的日期(周几)，请不要向后选择日期！"
+
+#: templates/cousession/cousession.html:4
+msgid "My Session Schedule"
+msgstr "我的排课表"
+
+#: templates/cousession/cousession.html:6
+msgid "Finished Sum"
+msgstr "已完成总计"
+
+#: templates/cousession/cousession.html:6
+#: templates/cousession/cousession.html:8
+#: templates/cousession/cousession.html:10
+msgid "times"
+msgstr "次"
+
+#: templates/cousession/cousession.html:8
+msgid "Cancelled"
+msgstr "已取消"
+
+#: templates/cousession/cousession.html:10
+msgid "Not Start"
+msgstr "未开始"
+
+#: templates/cousession/cousession.html:18
+msgid "Session No."
+msgstr "上课编号"
+
+#: templates/cousession/cousession.html:21
+msgid "Student"
+msgstr "学生"
+
+#: templates/cousession/cousession.html:24
+msgid "Course No."
+msgstr "课程号"
+
+#: templates/cousession/cousession.html:33
+msgid "Created By"
+msgstr "创建于"
+
+#: templates/cousession/cousession.html:42
+msgid "Action"
+msgstr "动作"
+
+#: templates/cousession/cousession.html:57
+msgid "Cancel"
+msgstr "取消"
+
+#: templates/cousession/cousession.html:59
+msgid "Stop"
+msgstr "停止"
+

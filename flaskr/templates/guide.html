@@ -1,0 +1,68 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-10 column col-md-offset-1">
+            <h3>
+            1: 注册
+            </h3>
+            <p>
+				如果您对Out of Box英语感兴趣，请先注册，注册成功后即可预约课程，第一次课为免费试听课， 试听课后，外教会给出对应学生的评估报告和建议水平课程。
+                <a class="btn" href="{{ url_for('auth.register') }}">注册 >></a>
+			</p>
+            <div align="center" class="clearfix">
+                <img src="/static/img/register.png" class="img-responsive">
+            </div>
+            <hr>
+            <h3>
+             2: 预约上课时间
+            </h3>
+            <p>
+                登录之后，您可以在“<a href="{{ url_for('course.query') }}">课程预约</a>”看到我们的英语教师当前开课列表。
+                如果某个时段的课程匹配您的时间，请点击“预订”课程。预订之后您可以在“<a href="{{url_for('cousession.query')}}">排课计划</a>”中看到
+                孩子的具体上课记录，由系统自动生成统计。状态为“已预订”的课程是指被其他学生预定的课程，不能预约。如您对上课有特殊的要求，请联系客服人员。
+            </p>
+            <div align="center" class="clearfix">
+                <img src="/static/img/reserve.png" class="img-responsive">
+            </div>
+            <hr>
+            <h3>
+                3: 进入在线教室上课
+            </h3>
+            <p>
+                当前使用ZOOM视频会议软件，每次上课前，外教会把会议室ID和密码通知您，进入在线教室即可为您的孩子带来纯正北美外教
+                的浸入式学习空间。<a class="btn" href="{{url_for('download.query')}}">进入下载中心 >></a>
+            </p>
+            <div align="center" class="clearfix">
+               <img src="/static/img/zoom.png" class="img-responsive">
+            </div>
+            <hr>
+            <h3>
+                4: 如何取消预约？
+            </h3>
+            <p><ul>
+            <li>如本次无法上课，您可以点击排课表的“取消”链接提前删除即将到来的课。但请注意，只能在本周上课时间之前取消。</li>
+            <li>时间已经过了本周上课时间后，状态将变为“Finished”，这将被计为正常课程的一次。</li>
+            <li>当成功取消了即将到来的课程，状态是“Cancelled”，这意味着您成功跳过了一次课，但是预约仍然会自动出现在下一周的课表上。 </li>
+            <li>教师和学生都可以有权限提前取消课程。</li>
+        </ul>
+            </p>
+            <div class="clearfix">
+                <img src="/static/img/session.png" class="img-responsive">
+            </div>
+            <hr>
+            <h3>
+               5: 如何查看与更新个人信息？
+            </h3>
+            <p>
+                点击“欢迎您, 用户名”可以进入个人信息查询与修改，可以完善个人真实姓名、性别、水平、联系方式等，并可以查看个人课时与费用情况，个人积分变化等。
+            </p>
+            <div class="clearfix">
+                <img src="/static/img/profile.png" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

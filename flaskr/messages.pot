@@ -1,0 +1,288 @@
+# Translations template for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-05-30 21:23+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: auth.py:26 templates/base.html:65
+msgid "Register"
+msgstr ""
+
+#: auth.py:48
+msgid "Log in"
+msgstr ""
+
+#: templates/base.html:40
+msgid "Home"
+msgstr ""
+
+#: templates/base.html:43
+msgid "Curriculum"
+msgstr ""
+
+#: templates/base.html:46
+msgid "How to Use"
+msgstr ""
+
+#: templates/base.html:49
+msgid "CourseList"
+msgstr ""
+
+#: templates/base.html:52
+msgid "Scheduling"
+msgstr ""
+
+#: templates/base.html:56
+msgid "Video Classroom"
+msgstr ""
+
+#: templates/base.html:57
+msgid "Download"
+msgstr ""
+
+#: templates/base.html:62
+msgid "Welcome"
+msgstr ""
+
+#: templates/base.html:63
+msgid "Logout"
+msgstr ""
+
+#: templates/base.html:66
+msgid "Login"
+msgstr ""
+
+#: templates/auth/login.html:4
+#, python-format
+msgid "%(ltitle)s"
+msgstr ""
+
+#: templates/auth/login.html:14 templates/auth/register.html:13
+#, python-format
+msgid "%(username)s"
+msgstr ""
+
+#: templates/auth/login.html:20 templates/auth/register.html:22
+#, python-format
+msgid "%(password)s"
+msgstr ""
+
+#: templates/auth/login.html:28
+#, python-format
+msgid "%(remember)s"
+msgstr ""
+
+#: templates/auth/register.html:4
+#, python-format
+msgid "%(rtitle)s"
+msgstr ""
+
+#: templates/auth/register.html:31
+#, python-format
+msgid "%(password2)s"
+msgstr ""
+
+#: templates/auth/register.html:40
+#, python-format
+msgid "%(email)s"
+msgstr ""
+
+#: templates/auth/register.html:46
+#, python-format
+msgid "%(identity)s"
+msgstr ""
+
+#: templates/blog/blog.html:4
+msgid "Post Here"
+msgstr ""
+
+#: templates/blog/blog.html:6
+msgid "Create Post"
+msgstr ""
+
+#: templates/blog/blog.html:23
+msgid "Post on"
+msgstr ""
+
+#: templates/blog/blog.html:25 templates/blog/update.html:4
+msgid "Edit"
+msgstr ""
+
+#: templates/blog/create.html:4
+msgid "New Post"
+msgstr ""
+
+#: templates/blog/create.html:11 templates/blog/update.html:11
+msgid "Title"
+msgstr ""
+
+#: templates/blog/create.html:15 templates/blog/update.html:15
+msgid "Content"
+msgstr ""
+
+#: templates/blog/create.html:20 templates/blog/update.html:17
+msgid "Save"
+msgstr ""
+
+#: templates/blog/update.html:22 templates/course/course.html:58
+msgid "Delete"
+msgstr ""
+
+#: templates/course/course.html:4
+msgid "Course List"
+msgstr ""
+
+#: templates/course/course.html:7 templates/course/create.html:4
+msgid "Create Course"
+msgstr ""
+
+#: templates/course/course.html:14 templates/cousession/book.html:7
+msgid "No."
+msgstr ""
+
+#: templates/course/course.html:17 templates/course/create.html:7
+#: templates/cousession/book.html:19 templates/cousession/cousession.html:36
+msgid "Teacher"
+msgstr ""
+
+#: templates/course/course.html:20 templates/course/create.html:27
+#: templates/cousession/book.html:25 templates/cousession/cousession.html:27
+msgid "Course Name"
+msgstr ""
+
+#: templates/course/course.html:23 templates/course/create.html:35
+#: templates/cousession/book.html:31
+msgid "Week Day"
+msgstr ""
+
+#: templates/course/course.html:26 templates/course/create.html:49
+#: templates/cousession/book.html:37
+msgid "Beginning Time"
+msgstr ""
+
+#: templates/course/course.html:29
+msgid "Duration (Min)"
+msgstr ""
+
+#: templates/course/course.html:32 templates/cousession/cousession.html:39
+msgid "Status"
+msgstr ""
+
+#: templates/course/course.html:46
+msgid "Reserved"
+msgstr ""
+
+#: templates/course/course.html:56
+msgid "Reserve"
+msgstr ""
+
+#: templates/course/create.html:19
+msgid "Course Type"
+msgstr ""
+
+#: templates/course/create.html:83
+msgid "Duration"
+msgstr ""
+
+#: templates/course/create.html:90
+msgid "Create"
+msgstr ""
+
+#: templates/cousession/book.html:4
+msgid "Reserve Course"
+msgstr ""
+
+#: templates/cousession/book.html:13
+msgid "Student ID"
+msgstr ""
+
+#: templates/cousession/book.html:43 templates/cousession/book.html:72
+#: templates/cousession/cousession.html:30
+msgid "Session Date"
+msgstr ""
+
+#: templates/cousession/book.html:57
+msgid "Recurred"
+msgstr ""
+
+#: templates/cousession/book.html:64
+msgid "Confirm"
+msgstr ""
+
+#: templates/cousession/book.html:72
+msgid "Please Remind!"
+msgstr ""
+
+#: templates/cousession/book.html:72
+msgid "The"
+msgstr ""
+
+#: templates/cousession/book.html:73
+msgid ""
+"should be the Week Day of the first session you're planning to have. Do "
+"not choose the date backwards."
+msgstr ""
+
+#: templates/cousession/cousession.html:4
+msgid "My Session Schedule"
+msgstr ""
+
+#: templates/cousession/cousession.html:6
+msgid "Finished Sum"
+msgstr ""
+
+#: templates/cousession/cousession.html:6
+#: templates/cousession/cousession.html:8
+#: templates/cousession/cousession.html:10
+msgid "times"
+msgstr ""
+
+#: templates/cousession/cousession.html:8
+msgid "Cancelled"
+msgstr ""
+
+#: templates/cousession/cousession.html:10
+msgid "Not Start"
+msgstr ""
+
+#: templates/cousession/cousession.html:18
+msgid "Session No."
+msgstr ""
+
+#: templates/cousession/cousession.html:21
+msgid "Student"
+msgstr ""
+
+#: templates/cousession/cousession.html:24
+msgid "Course No."
+msgstr ""
+
+#: templates/cousession/cousession.html:33
+msgid "Created By"
+msgstr ""
+
+#: templates/cousession/cousession.html:42
+msgid "Action"
+msgstr ""
+
+#: templates/cousession/cousession.html:57
+msgid "Cancel"
+msgstr ""
+
+#: templates/cousession/cousession.html:59
+msgid "Stop"
+msgstr ""
+

@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="carousel slide" id="myCarousel">
+                                <!-- 轮播（Carousel）指标 -->
+                                <ul class="carousel-indicators">
+                                        <li class="active" data-slide-to="0" data-target="#myCarousel">
+                                        </li>
+                                        <li data-slide-to="1" data-target="#myCarousel">
+                                        </li>
+                                        <li data-slide-to="2" data-target="#myCarousel">
+                                        </li>
+                                </ul>
+                                <!-- 轮播（Carousel）主体 -->
+                                <div class="carousel-inner">
+                                        <div class="item active">
+                                                <img alt="First Slide" src="static/img/default.jpg" />
+                                                  <div class="carousel-caption">
+                                                      <h4>Connecting Students and Teachers Globally</h4>
+                                                  </div>
+                                        </div>
+                                        <div class="item">
+                                                <img alt="Second Slide" src="static/img/default1.jpg" />
+                                        </div>
+                                        <div class="item">
+                                                <img alt="Third Slide" src="static/img/default2.jpg" />
+                                        </div>
+                                </div>
+</div>
+
+<br>
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="330x150" src="/static/img/travis.png"/>
+						<div class="caption">
+							<h4>
+								即学即用，生动有趣
+							</h4>
+							<p>
+								1对1外教在线视频教学，全浸入式课堂互动，即学即用的现实高频场景对话。
+								并由外教带领阅读理解精选文章，辅导写作，兼顾语言的输入与输出。
+							</p>
+							<p>
+								 <a class="btn" href="{{url_for('course.query_curriculum')}}">查看详细</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="330x150" src="/static/img/ashley.png" />
+						<div class="caption">
+							<h4>
+								严选北美外教，经验丰富
+							</h4>
+							<p>
+								一个外教长期教同一个学生，更深入了解学生，精心辅导成长。
+								独有的双向评价体系，学生可以给老师评分，老师课后对学生表现评价，便于课后改进。
+							</p>
+							<p>
+								 <a class="btn" href="{{url_for('course.query_curriculum')}}">查看详细</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="350x150" src="/static/img/travis.png" />
+						<div class="caption">
+							<h4>
+								是课堂，也是社区
+							</h4>
+							<p>
+								学生可以通过每日登录，分享学习内容，准时上课等行为累计积分，逐级成长，
+								开启闯关模式，从小书童成长为大学神，收获满满自信心。
+							</p>
+							<p>
+								 <a class="btn" href="{{url_for('course.query_curriculum')}}">查看详细</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<script type="text/javascript">
+        $('#myCarousel').carousel({
+           interval:4000,
+           });
+</script>
+
+{% endblock %}

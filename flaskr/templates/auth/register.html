@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h4>{% block title %}{{_("%(rtitle)s",rtitle=rtitle)}}{% endblock %}</h4>
+<script type="text/javascript">
+function disable()
+{
+         document.getElementById("accept").disabled=true;
+}
+function enable()
+{
+         document.getElementById("accept").disabled=false;
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="row clearfix">
+  <div class="col-md-12 column col-sm-offset-2">
+  <form method="post" role="form" class="form-horizontal">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+    <label class="col-sm-2 control-label">{{ _("%(username)s", username=form.username.label) }}:</label>
+      <div class="col-sm-4">
+      <input name="username" id="username" placeholder="User's English Name" class="form-control" required>
+      </div>
+      {% for error in form.username.errors %}
+      <span style="color: red;">{{ error }}</span>
+      {% endfor %}
+    </div>
+    <div class="form-group">
+    <label class="col-sm-2 control-label">{{ _("%(password)s", password=form.password.label) }}:</label>
+      <div class="col-sm-4">
+        <input type="password" name="password" placeholder="Password is 6 characters at least" id="password" class="form-control" required>
+      </div>
+      {% for error in form.password.errors %}
+      <span style="color: red;">{{ error }}</span>
+      {% endfor %}
+    </div>
+    <div class="form-group">
+    <label class="col-sm-2 control-label">{{ _("%(password2)s", password2=form.password2.label) }}:</label>
+      <div class="col-sm-4">
+        <input type="password" name="password2" placeholder="Password is 6 characters at least" id="password2" class="form-control" required>
+      </div>
+      {% for error in form.password2.errors %}
+      <span style="color: red;">{{ error }}</span>
+      {% endfor %}
+    </div>
+    <div class="form-group">
+    <label class="col-sm-2 control-label">{{ _("%(email)s", email=form.email.label) }}:</label>
+      <div class="col-sm-4">
+        <input type="email" name="email" placeholder="Email is for resetting password" id="email" class="form-control" required>
+      </div>
+    </div>
+    <div class="form-group">
+    <label class="col-sm-2 control-label">{{form.phone.label}}:</label>
+      <div class="col-sm-4">
+        <input type="phone" name="phone" placeholder="Cellphone number is for notification" id="phone" class="form-control" required>
+      </div>
+    </div>
+    <div class="form-group">
+     <label class="col-sm-2 control-label">{{ _("%(identity)s", identity=form.identity.label) }}:</label>
+     <div class="col-sm-2">
+       <input type="radio" name="identity" value="student" checked> student
+       <input type="radio" name="identity" value="teacher" > teacher
+     </div>
+   </div>
+    <div class="form-group">
+    <div class="col-sm-10 col-sm-offset-2">
+      <div class="checkbox">
+        <label><input type="checkBox" onclick="if (this.checked) {enable()} else {disable()}">I Agree <a href="#">Terms of Use and Privacy Policy</a></label>
+      </div>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <input id="accept" type="submit" disabled="true" value="Register" class="btn btn-default">
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
+{% endblock %}

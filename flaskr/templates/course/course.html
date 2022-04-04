@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h3>{% block title %}{{_("Course List")}}{% endblock %}</h3>
+
+			{% if current_user.role_id == 0 %}
+			<a class="action" href="{{ url_for('course.create') }}">{{_("Create Course")}}</a>
+			{% endif %}
+<div class="table-responsive">
+			<table class="table table-hover table-bordered" id="iCourse">
+				<thead>
+					<tr bgcolor="lightblue">
+						<th>
+							{{_("No.")}}
+						</th>
+						<th>
+							{{_("Teacher")}}
+						</th>
+						<th>
+							{{_("Course Name")}}
+						</th>
+						<th>
+							{{_("Week Day")}}
+						</th>
+						<th>
+							{{_("Beginning Time")}} (GMT+8)
+						</th>
+						<th>
+							{{_("Duration (Min)")}}
+						</th>
+						<th>
+						    {{_("Status")}}
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+				{% for course in courses %}
+				{% if course.isBooked == 1 %}
+				<tr class="success">
+					<td>{{ course.id }}</td>
+					<td>{{ course.teacher }}</td>
+					<td>{{ course.course_name }}</td>
+					<td>{{ course.course_day }}</td>
+					<td>{{ course.course_start_at }}</td>
+					<td>{{ course.course_duration }}</td>
+					<td>{{_("Reserved")}}</td>
+				</tr>
+				{% else %}
+				<tr class="error">
+					<td>{{ course.id }}</td>
+					<td>{{ course.teacher }}</td>
+					<td>{{ course.course_name }}</td>
+					<td>{{ course.course_day }}</td>
+					<td>{{ course.course_start_at }}</td>
+					<td>{{ course.course_duration }}</td>
+					<td><a class=action, href="{{url_for('cousession.book', id=course.id)}}">{{_("Reserve")}}</a>
+					{% if current_user.role_id == 0 %}
+						<a class=action, href="{{ url_for('course.delete', id=course.id) }}">{{_("Delete")}}</a>
+					{% endif %}
+					</td>
+				</tr>
+				{% endif %}
+				{% endfor %}
+				</tbody>
+			</table>
+</div>
+<hr>
+<nav>
+	<ul class="pagination">
+    {% if prev_url %}
+		<li><a href="{{ prev_url }}"><<</a></li>
+    {% endif %}
+		{%for page in pagination.iter_pages(1,1,3,1)%}
+          {%if page%}
+               <li class="page-item {%if page==pagination.page%}active{%endif%}"><a class="page-link" href="{{url_for('course.query',page=page)}}">{{page}}</a></li>
+		  {%else%}
+                <li class="page-item disabled"><a class="page-link" href="#">&hellip;</a></li>
+		  {%endif%}
+		{%endfor%}
+    {% if next_url %}
+		<li><a href="{{ next_url }}">>></a></li>
+    {% endif %}
+	</ul>
+</nav>
+{% endblock %}

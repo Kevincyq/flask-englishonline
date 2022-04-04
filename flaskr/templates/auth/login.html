@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h4>{% block title %}{{_("%(ltitle)s",ltitle=ltitle)}}{% endblock %}</h4>
+{% endblock %}
+
+
+{% block content %}
+<div class="row clearfix">
+  <div class="col-md-12 column col-sm-offset-2">
+    {{ form.hidden_tag() }}
+  <form method="post" role="form" class="form-horizontal">
+    <div class="form-group">
+    <label class="col-sm-2 control-label">{{_("%(username)s", username=form.username.label)}}:</label>
+      <div class="col-sm-4">
+     {{form.username(size=32, class='form-control')}}
+      </div>
+    </div>
+    <div class="form-group">
+    <label class="col-sm-2 control-label">{{_("%(password)s", password=form.password.label)}}:</label>
+      <div class="col-sm-4">
+        {{form.password(size=32, class='form-control')}}
+      </div>
+    </div>
+    <div class="col-sm-2 colum col-sm-offset-2">
+      <p><a href="{{url_for('auth.reset_password_request')}}">Forgot Password?</a></p>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox" checked/>{{ _("%(remember)s", remember=form.remember_me.label) }}</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        {{ form.submit()}}
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
+{% endblock %}

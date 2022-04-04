@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					<a href="{{url_for('manage.query')}}">Users</a>
+				</li>
+				<li class="active">
+					 Payment
+				</li>
+				<li>
+					<a href="{{url_for('manage.expense')}}">Expense</a>
+				</li>
+				<li>
+					<a href="{{url_for('manage.awards')}}">Awards</a>
+				</li>
+				<li>
+					<a href="#">Blogs</a>
+				</li>
+				<li>
+					<a href="#">Comments</a>
+				</li>
+			</ul>
+			<form method="post" role="form" class="form-horizontal">
+				<div class="form-group">
+					<label for="student_id" class="col-sm-2 control-label">Student ID:</label>
+					<div class="col-sm-2">
+						<input name="student_id" id="student_id" class="form-control" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="top_up_value" class="col-sm-2 control-label">Value:</label>
+					<div class="col-sm-2">
+						<input name="top_up_value" id="top_up_value" class="form-control" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="price" class="col-sm-2 control-label">Price / Session ($):</label>
+					<div class="col-sm-2">
+						<input name="price" id="price" class="form-control" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Top Up</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+{% endblock %}

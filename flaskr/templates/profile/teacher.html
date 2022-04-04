@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+			<div class="col-md-3 blog-sidebar">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 id="zcr-profile"><strong>My Profile</strong></h4>
+						<!--<img src="#" alt="" class="img-responsive center-block" id="#img" title=""> -->
+					</div>
+				</div>
+				<hr>
+				<div class="sidebar-module list-group blog-tags">
+					<a href="{{url_for('profile.redirection')}}" class="list-group-item">
+					<span class="icon fa fa-folder-open"></span> Basic Setting
+					</a>
+					<a href="{{url_for('profile.update_password')}}" class="list-group-item">
+					<span class="icon fa fa-folder-open"></span> Change Password
+					</a>
+					<a href="{{url_for('profile.check_tuition')}}" class="list-group-item">
+					<span></span>Tuition Statistics
+					</a>
+					<a href="#" class="list-group-item">
+					<span class="icon fa fa-folder-open"></span> My Post
+					</a>
+					
+				</div>
+			</div>
+
+			<div class="col-md-9 blog-main">
+				<div>
+					<h5><span style="color: red">* Nick Name：</span><span>{{teacher.user}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span style="color: red">* Email: </span> <span>{{teacher.user.user_email}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span style="color: red">* Register: </span> <span>{{teacher.user.register_at}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Full Name: </span> <span>{{teacher.real_name}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span>Gender: </span> <span>{{teacher.gender}}</span></h5>
+					<hr>
+				</div>
+				<div>
+					<h5><span style="color: red">* Level: </span> <span>{{teacher.level}}</span></h5>
+					<hr>
+				</div>
+
+				<p>
+					<a class="btn btn-primary" href="{{url_for('profile.edit')}}">Edit</a>
+				</p>
+
+			</div>
+<!-- /.main-content -->
+{% endblock %}
