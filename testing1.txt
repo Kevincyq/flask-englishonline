@@ -3,3 +3,4 @@ Hello world.
 Hello world.
 the last line of the file.
 This is another testing version to test branch derived from master.
+Creating a new branch is quick and simple.
